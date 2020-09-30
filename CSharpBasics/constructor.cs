@@ -6,6 +6,9 @@ namespace LearningClasses
 
         public int Population {get; set; }
 
+        public static readonly bool IsOnEarth;
+        //Instance Construcors
+
         // Default constructor - parameter less
         public Country()
         {
@@ -17,6 +20,13 @@ namespace LearningClasses
             Name = name;
             Population = population;
         }
+
+        //static constructor
+        static country()
+        {
+            IsOnEarth = true;
+        }
+        
     }
 
     public class Demo
@@ -24,7 +34,7 @@ namespace LearningClasses
         void DoSomething()
         {
             Country country1 = new Country();
-            // Country country2 = new Country("Nepal");
+            Country country2 = new Country("Nepal");
             
         }
         
